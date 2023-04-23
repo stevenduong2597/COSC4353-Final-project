@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1680494247881" clover="3.2.0">
+  <project timestamp="1680494247881" name="All files">
+    <metrics statements="41" coveredstatements="15" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0" elements="67" coveredelements="15" complexity="0" loc="41" ncloc="41" packages="1" files="1" classes="1"/>
+    <file name="setting.js" path="/Users/stevenduong/Documents/EDUCATION/UH/SPRING 2023/COSC4353 SW DESIGN/hw3/setting.js">
+      <metrics statements="41" coveredstatements="15" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
+      <line num="77" count="0" type="stmt"/>
+      <line num="79" count="0" type="stmt"/>
+      <line num="97" count="1" type="stmt"/>
+      <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="99" count="0" type="stmt"/>
+      <line num="101" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="102" count="0" type="stmt"/>
+      <line num="104" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="105" count="0" type="stmt"/>
+      <line num="107" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="108" count="0" type="stmt"/>
+      <line num="110" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="111" count="0" type="stmt"/>
+      <line num="113" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="114" count="0" type="stmt"/>
+      <line num="116" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="117" count="0" type="stmt"/>
+      <line num="119" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="120" count="0" type="stmt"/>
+      <line num="122" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="123" count="0" type="stmt"/>
+      <line num="125" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="126" count="0" type="stmt"/>
+      <line num="128" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="129" count="0" type="stmt"/>
+      <line num="133" count="0" type="stmt"/>
+      <line num="137" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
