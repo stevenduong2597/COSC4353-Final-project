@@ -214,7 +214,8 @@ app.get("/items", (req, res) => {
 
     runAd();
     async function runAd(){
-
+        
+        localID = req.session.passport.user;
         const temp2 = await User.findById(localID);
         
         if(temp2 == null){
