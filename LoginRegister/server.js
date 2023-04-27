@@ -282,8 +282,8 @@ app.post('/dashboard', (req, res) => {
             requested: req.body.gallons,
             address: req.body.address,
             date: req.body.date,
-            suggested: "$300",
-            total: "$" + parseInt(300 * req.body.gallons)
+            suggested: req.body.suggested,
+            total: req.body.total
         });
     
         await hist.save();
