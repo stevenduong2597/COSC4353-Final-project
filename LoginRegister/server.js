@@ -29,6 +29,7 @@ app.set('view engine', 'ejs');
 
 
 
+
 //function that will authenticate users from db
 initializePassport(
     passport,
@@ -52,6 +53,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride("_method"))
 
+app.use(express.json());
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 app.use('/css', express.static(__dirname + 'public/css'));
@@ -213,7 +215,7 @@ app.get("/items", (req, res) => {
     runAd();
     async function runAd(){
 
-        const temp2 = await Client.findById(localID);
+        const temp2 = await User.findById(localID);
         
         if(temp2 == null){
             return;
@@ -221,10 +223,49 @@ app.get("/items", (req, res) => {
 
         res.status(200).json({
 
+            state: temp2.state,
             address: temp2.address,
-            clientID: temp2.id
+            clientID: temp2._id.toString()
 
         });
+    }
+});
+
+//pricing module
+app.post("/pricing", (req, res) => {
+
+    runAd();
+    async function runAd(){
+
+        let galFactor;
+        if(req.body.requested > 1000)
+            galFactor = 0.02;
+        else    
+            galFactor = 0.03;
+
+        let locFactor;
+        if(req.body.state == 'TX' || req.body.state == 'Texas')
+            locFactor = 0.02;
+        else   
+            locFactor = 0.04;
+
+        let hisFactor;
+        const exists = await History.exists({clientID: req.body.ID});
+        if(exists != null)
+            hisFactor = 0.01;
+        else   
+            hisFactor = 0;
+
+        
+        let suggested = (galFactor + locFactor + hisFactor + 0.1) * 1.50;
+        suggested = suggested.toFixed(3);
+        let total = "$" + (req.body.requested * suggested).toFixed(3);
+        suggested = "$" + suggested;
+
+        res.json({
+            suggested: suggested,
+            total: total
+        })
 
     }
 });
