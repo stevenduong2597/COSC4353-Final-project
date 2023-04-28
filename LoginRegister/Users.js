@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    adress: {
+    address: {
         type:String,
         required:true,
     },
@@ -34,15 +34,15 @@ const userSchema = new mongoose.Schema({
     },
     cardNumber: {
         type:String,
-        required:true,
+        required:false,
     },
     cardExp: {
         type:String,
-        required:true,
+        required:false,
     },
     password: {
         type:String,
-        required:true,
+        required:false,
     }
 })
 
